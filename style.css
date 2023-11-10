@@ -8,6 +8,7 @@
 body {
   background: #f2f5f3;
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 header {
@@ -23,88 +24,151 @@ header {
   font-family: "Poppins";
   color: grey;
   font-weight: bold;
-  
-
+}
+.btnlogin {
+  background: #f2f5f3;
+  color: #089081;
+  padding: 10px;
+  font-weight: bold;
 }
 
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 12%;
+  scroll-behavior: smooth;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.formContainer {
+  scroll-behavior: smooth;
+  max-width: 400px;
+  padding: 10px;
+  background: white;
+  -webkit-box-shadow: 5px 5px 15px 5px #757575;
+  box-shadow: 5px 5px 15px 5px #757575;
+  overflow-y: auto;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #ddd;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #089081;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgba(255, 0, 0, 50);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+.signUpText {
+  color: #089081;
+  text-align: center;
+  cursor: pointer;
+}
 .navItems {
   display: flex;
   gap: 20px;
+  text-align: center;
 }
 .navItems > a {
   list-style-type: none;
   text-decoration: none;
   font-family: "Poppins";
-  font-weight:450;
+  font-weight: 450;
   padding: 5px;
+  color: #999a96;
+  font-weight: bolder;
 }
-.navItems > a :hover{
+.navItems > a :hover {
   background-color: #0d9182;
   color: white;
 }
-.homeContainer{
+.homeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
-.homeImageContainer{
+header {
+  position: sticky;
+  top: 0px;
+}
+.homeImageContainer {
   width: 50%;
-  
 }
-.homeText > h2{
+.homeText > h2 {
   font-family: "Poppins";
   font-size: 50px;
   margin-bottom: 20px;
   color: #3e3f38;
 }
-.homeText > p{
+.homeText > p {
   font-size: 20px;
   text-wrap: wrap;
   margin-bottom: 18px;
   color: #999a96;
 }
-.btnContact{
-  display: inline;
-  border: 2px solid #089081;
-  background-color: #white;
-  padding: 10px;
-  width: 200px;
-  
-}
-
-.btnContact > span{
-  display: inline-flex;
-  text-align: center;
+.btnContact {
+  background-color: #f2f5f3;
+  border: 3px solid #089081;
+  border-radius: 5px;
+  max-width: 120px;
+  padding: 5px;
+  color: #999a96;
   font-weight: bold;
-  color:#0d9182 ;
 }
-.btnContact :hover{
+.btnContact:hover {
   background-color: #089081;
-  color: #f2f5f3;
-  cursor: pointer;
+  color: white;
 }
-.serviceContainer{
+.serviceContainer {
   display: flex;
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
 }
-.serviceContainer > h2{
+.serviceContainer > h2 {
   font-size: 50px;
   font-weight: bold;
   text-indent: 2px;
   /* !text-shadow: 2px 2px 8px #FF0000;  */
 }
-.headingone{
+.headingone {
   color: #3e3f38;
 }
-.serviceheading{
+.serviceheading {
   color: #089081;
-
 }
-.serdisone{
+.serdisone {
   border: 2px solid black;
   width: 400px;
   margin: 20px;
@@ -114,25 +178,24 @@ header {
   padding: 15px;
   column-gap: 50px;
 }
-.serdisone > i{
+.serdisone > i {
   font-size: 50px;
   margin: 10px;
 }
-.serdisone > h4{
+.serdisone > h4 {
   text-align: left;
   margin-left: 10px;
-  font-weight:900;
+  font-weight: 900;
   font-size: 28px;
   counter-reset: #3e3f38;
 }
-.serdisone > p{
+.serdisone > p {
   margin-left: 10px;
   color: #999a96;
   font-weight: bolder;
   margin-top: 20px;
-  
 }
-.serdisone > button{
+.serdisone > button {
   margin: 40px;
   padding: 10px;
   margin-left: 10px;
@@ -143,28 +206,31 @@ header {
   color: #999a96;
   font-weight: bolder;
   font-size: medium;
-  
+}
+.serdisone > button:hover {
+  background-color: #089081;
+  color: white;
 }
 
-.serviceDispalyContainer{
+.serviceDispalyContainer {
   display: flex;
   flex-wrap: wrap;
 }
-.bookingContainer{
+.bookingContainer {
   display: flex;
-  
+
   align-items: center;
 }
-.bookImage{
+.bookImage {
   width: 50%;
 }
-.bookHeading{
+.bookHeading {
   text-align: center;
   font-size: 50px;
   font-weight: bolder;
   color: #3e3f38;
 }
-.contactForm{
+.contactForm {
   border: 4px solid #089081;
   border-radius: 5px;
   display: flex;
@@ -172,12 +238,12 @@ header {
   padding: 20px;
   width: 100%;
 }
-.contactHead{
+.contactHead {
   font-size: 40px;
   font-weight: bold;
   color: #3e3f38;
 }
-.input{
+.input {
   font-size: large;
   padding: 10px;
   margin: 5px;
@@ -186,16 +252,36 @@ header {
   font-weight: bold;
   color: black;
 }
-.submitButton{
+.submitButton {
   border: 2px solid #089081;
   border-radius: 4px;
   width: 200px;
   height: 40px;
   margin-left: 90px;
   background-color: white;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-footer > p{
+footer > p {
   text-align: center;
   margin: 40px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
